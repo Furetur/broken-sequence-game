@@ -48,7 +48,7 @@ const prepareNextLevel = (level) => {
                 animateWin();
 
                 if (level === 20) {
-                    alert('Nice')
+                    animateTotalWin();
                 }
     
                 setTimeout(() => {

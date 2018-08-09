@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     background: #0b1234;
     font-weight: bold;
-	font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -68,6 +68,10 @@ html, body {
     animation: neon 1.5s ease-in-out infinite alternate;
 }
 
+.spin {
+    animation: spin 2s 1 ease-in-out;
+}
+
 @keyframes neon {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
@@ -83,5 +87,14 @@ html, body {
     }
     to {
         text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 9px #ff00de;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotate3d(1, 0, 1, 360deg);
     }
 }

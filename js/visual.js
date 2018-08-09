@@ -7,6 +7,7 @@ const LONGEST_PAUSE_TIME = 3000;
 
 const body = document.querySelector('body');
 const root = document.querySelector('.root');
+const levelPanel = document.querySelector('#level');
 const levelDisplay = document.querySelector('#level-display');
 const buttons = document.querySelectorAll('.one-button');
 
@@ -51,4 +52,8 @@ const animateLose = () => {
     buttons.forEach((button, index) => {
         highlightButton(index);
     })
+}
+
+const animateTotalWin = () => {
+    levelPanel.classList.add('spin');
 }
