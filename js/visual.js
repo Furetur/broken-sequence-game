@@ -1,4 +1,4 @@
-const BUTTON_HIGHLIGHT_TIME = 500;
+const BUTTON_HIGHLIGHT_TIME = 300;
 const PAUSE_TIME = 200;
 const SHORT_PAUSE_TIME = 2;
 const MEDIUM_PAUSE_TIME = 500;
@@ -35,7 +35,7 @@ const hideLoadingScreen = () => {
 const showSequence = (sequence, delay = MEDIUM_PAUSE_TIME) => {
     if (sequence.length === 0) return;
 
-    highlightButton(sequence[0], delay - 100);
+    highlightButton(sequence[0]);
 
     setTimeout(() => {
         showSequence(sequence.slice(1))
