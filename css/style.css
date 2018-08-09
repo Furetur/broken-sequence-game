@@ -57,7 +57,7 @@ html, body {
 .one-button:active {
     outline: none;
     /* animation: onclick 0.3s ease-in-out alternate; */
-    background: radial-gradient(circle 40px, #123DFF, #0b1234)
+    background: radial-gradient(circle 40px, #C774E8, #0b1234)
 }
 
 .one-button:focus {
