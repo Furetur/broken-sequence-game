@@ -93,17 +93,15 @@ const generateExampleSequence = (goal) => {
     const sequence = [];
     let remainingGoal = goal;
 
+    
+
     while (remainingGoal !== 0) {
-        const randomButtonIndex = random(
-            0,
-            // because if remainingGoal is small like 1
-            // we can choose only button 1
-            Math.min(getLastButtonValue(), remainingGoal) - 1
-        );
+        const validButtons = Array.from(buttons).filter(button => parseInt(button.innerHTML) <= remainingGoal);
+        const randomButton = randomFromArray(validButtons)
         
-        sequence.push(randomButtonIndex);
+        sequence.push(randomButton.id);
         // subtract button number from the remaining goal 
-        remainingGoal -= getButtonValue(randomButtonIndex);
+        remainingGoal -= getButtonValue(randomButton.id);
     };
 
     return sequence;
