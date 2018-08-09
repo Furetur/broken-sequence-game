@@ -46,6 +46,10 @@ const prepareNextLevel = (level) => {
             setTimeout(() => {
                 // the player won
                 animateWin();
+
+                if (level === 20) {
+                    alert('Nice')
+                }
     
                 setTimeout(() => {
                     prepareNextLevel(level + 1);
